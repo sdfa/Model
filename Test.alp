@@ -290,8 +290,8 @@
 						<NumericType><![CDATA[double]]></NumericType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[100000
-//8]]></Code>
+							<Code><![CDATA[//0
+0.125]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1434214083755</Id>
@@ -316,8 +316,8 @@
 						<NumericType><![CDATA[double]]></NumericType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[100000
-//4]]></Code>
+							<Code><![CDATA[//0
+0.25]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1434214104332</Id>
@@ -342,9 +342,9 @@
 						<NumericType><![CDATA[double]]></NumericType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[//100000
-//2
-8./9]]></Code>
+							<Code><![CDATA[//0
+0.5
+//9./8]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1434214108597</Id>
@@ -609,7 +609,7 @@
 				<Connector>
 					<Id>1426238860059</Id>
 					<Name><![CDATA[connector14]]></Name>
-					<X>440</X><Y>190</Y>
+					<X>530</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -636,7 +636,7 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-60</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -740,110 +740,6 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>30</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1426333487758</Id>
-					<Name><![CDATA[connector5]]></Name>
-					<X>350</X><Y>190</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[test]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[glueing]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Delay]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[test]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[milling]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Delay]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-140</X><Y>0</Y></Point>
-						<Point><X>-140</X><Y>-60</Y></Point>
-						<Point><X>145</X><Y>-60</Y></Point>
-						<Point><X>430</X><Y>-60</Y></Point>
-						<Point><X>430</X><Y>-90</Y></Point>
-						<Point><X>380</X><Y>-90</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1426335128659</Id>
-					<Name><![CDATA[connector8]]></Name>
-					<X>630</X><Y>190</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[test]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[drying]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Delay]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[test]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[buffer_storage2]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Queue]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-60</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1426335128660</Id>
-					<Name><![CDATA[connector11]]></Name>
-					<X>530</X><Y>190</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[test]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[buffer_storage2]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Queue]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[test]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[pressing]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Delay]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -2339,6 +2235,109 @@
 						<Point><X>40</X><Y>-200</Y></Point>
 					</Points>
 				</Connector>
+				<Connector>
+					<Id>1435513738849</Id>
+					<Name><![CDATA[connector8]]></Name>
+					<X>570</X><Y>190</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[test]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[pressing]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[test]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[drying]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>60</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1435513824409</Id>
+					<Name><![CDATA[connector11]]></Name>
+					<X>370</X><Y>190</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[test]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[buffer_storage2]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Queue]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[test]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[glueing]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>60</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1435513903791</Id>
+					<Name><![CDATA[connector55]]></Name>
+					<X>330</X><Y>190</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[test]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[buffer_storage2]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Queue]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[test]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[milling]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-120</X><Y>0</Y></Point>
+						<Point><X>-120</X><Y>-60</Y></Point>
+						<Point><X>450</X><Y>-60</Y></Point>
+						<Point><X>450</X><Y>-90</Y></Point>
+						<Point><X>400</X><Y>-90</Y></Point>
+					</Points>
+				</Connector>
 			</Connectors>
 			<Events>
 				<Event>
@@ -3390,7 +3389,7 @@ source_start_C.inject(warehouse_C);]]></Action>
 				<EmbeddedObject>
 					<Id>1426238831241</Id>
 					<Name><![CDATA[glueing]]></Name>
-					<X>350</X><Y>170</Y>
+					<X>430</X><Y>170</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3468,7 +3467,7 @@ source_start_C.inject(warehouse_C);]]></Action>
 				<EmbeddedObject>
 					<Id>1426238857626</Id>
 					<Name><![CDATA[pressing]]></Name>
-					<X>440</X><Y>170</Y>
+					<X>530</X><Y>170</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3693,7 +3692,7 @@ source_start_C.inject(warehouse_C);]]></Action>
 				<EmbeddedObject>
 					<Id>1426335125545</Id>
 					<Name><![CDATA[buffer_storage2]]></Name>
-					<X>530</X><Y>170</Y>
+					<X>330</X><Y>170</Y>
 					<Label><X>-5</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4567,14 +4566,11 @@ source_start_C.inject(warehouse_C);]]></Action>
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[arrivalType]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[self.INTERARRIVAL_TIME]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[speed_C*2*uniform_pos()]]></Code>
+								<Code><![CDATA[speed_C]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -6275,14 +6271,11 @@ mean_order_C = timeMeasureEnd_order_C.distribution.mean()]]></Code>
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[arrivalType]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[self.INTERARRIVAL_TIME]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[speed_C*2*uniform_pos()]]></Code>
+								<Code><![CDATA[speed_B]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -6788,14 +6781,11 @@ mean_order_B = timeMeasureEnd_order_B.distribution.mean()]]></Code>
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[arrivalType]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[self.INTERARRIVAL_TIME]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[speed_C*2*uniform_pos()]]></Code>
+								<Code><![CDATA[speed_A]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -7303,31 +7293,9 @@ mean_order_A = timeMeasureEnd_order_A.distribution.mean()]]></Code>
 					<Longitude>0.0</Longitude>
 				</EmbeddedObjectPresentation>
 				<Text>
-					<Id>1434214570284</Id>
-					<Name><![CDATA[text]]></Name>
-					<X>10</X><Y>60</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<AsObject>true</AsObject>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<Color>-16777216</Color>
-					<Text><![CDATA[1 заявка в ]]></Text>
-					<Font>
-						<Name>SansSerif</Name>
-						<Size>12</Size>
-						<Style>0</Style>
-					</Font>
-					<Alignment>LEFT</Alignment>
-				</Text>
-				<Text>
-					<Id>1434214608303</Id>
+					<Id>1435510695544</Id>
 					<Name><![CDATA[text1]]></Name>
-					<X>10</X><Y>110</Y>
+					<X>40</X><Y>50</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7338,18 +7306,18 @@ mean_order_A = timeMeasureEnd_order_A.distribution.mean()]]></Code>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[1 заявка в ]]></Text>
+					<Text><![CDATA[Заявок в час]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
 						<Style>0</Style>
 					</Font>
-					<Alignment>LEFT</Alignment>
+					<Alignment>CENTER</Alignment>
 				</Text>
 				<Text>
-					<Id>1434214612558</Id>
+					<Id>1435510695547</Id>
 					<Name><![CDATA[text2]]></Name>
-					<X>10</X><Y>160</Y>
+					<X>40</X><Y>100</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7360,21 +7328,43 @@ mean_order_A = timeMeasureEnd_order_A.distribution.mean()]]></Code>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[1 заявка в ]]></Text>
+					<Text><![CDATA[Заявок в час]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
 						<Style>0</Style>
 					</Font>
-					<Alignment>LEFT</Alignment>
+					<Alignment>CENTER</Alignment>
+				</Text>
+				<Text>
+					<Id>1435510695549</Id>
+					<Name><![CDATA[text3]]></Name>
+					<X>40</X><Y>150</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Заявок в час]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>12</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>CENTER</Alignment>
 				</Text>
 			</Shapes>
 			<Controls>
 				<Control Type="EditBox">
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
-					<Id>1434214377487</Id>
+					<Id>1435510695552</Id>
 					<Name><![CDATA[editbox]]></Name>
-					<X>70</X><Y>50</Y>
+					<X>80</X><Y>40</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7394,9 +7384,9 @@ mean_order_A = timeMeasureEnd_order_A.distribution.mean()]]></Code>
 				</Control>
 				<Control Type="EditBox">
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
-					<Id>1434214391788</Id>
+					<Id>1435510695557</Id>
 					<Name><![CDATA[editbox1]]></Name>
-					<X>70</X><Y>100</Y>
+					<X>80</X><Y>90</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7416,9 +7406,9 @@ mean_order_A = timeMeasureEnd_order_A.distribution.mean()]]></Code>
 				</Control>
 				<Control Type="EditBox">
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
-					<Id>1434214407016</Id>
+					<Id>1435510695562</Id>
 					<Name><![CDATA[editbox2]]></Name>
-					<X>70</X><Y>150</Y>
+					<X>80</X><Y>140</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8891,12 +8881,25 @@ getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[speed_A]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[0
+//0.125]]></Code>
+					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[speed_B]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[0
+//0.25]]></Code>
+					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[speed_C]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[//0
+//0.5
+9./8]]></Code>
+					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[raw_cost_A]]></ParameterName>
@@ -8949,359 +8952,10 @@ getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
 			<ModelTimeProperties 
 				UseCalendar="true">
 				<StopOption><![CDATA[Stop at specified date]]></StopOption>
-				<InitialDate><![CDATA[1420102800000]]></InitialDate>	
+				<InitialDate><![CDATA[1420070400000]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1422748800000]]></FinalDate>	
-				<FinalTime><![CDATA[44100.0]]></FinalTime>	
-			</ModelTimeProperties>
-		</SimulationExperiment>
-		<!--   =========   Simulation Experiment   ========  -->
-		<SimulationExperiment ActiveObjectClassId="1421339683717">
-			<Id>1434974088503</Id>
-			<Name><![CDATA[Simulation_С]]></Name>
-			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
-			<Frame>
-				<X>0</X>
-				<Y>0</Y>
-				<Width>1000</Width>
-				<Height>600</Height>
-				<Maximized>false</Maximized>
-				<CloseConfirmation>false</CloseConfirmation>
-			</Frame>
-			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
-			<MaximumMemory>256</MaximumMemory>
-			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
-			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
-			<SeedValue>1</SeedValue>
-			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
-			<VmArgs><![CDATA[]]></VmArgs>
-			<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
-			<SnapshotFile></SnapshotFile>
-
-			<Shapes>
-				<Text>
-					<Id>1434974088504</Id>
-					<Name><![CDATA[text]]></Name>
-					<X>40</X><Y>30</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<Color>-12490271</Color>
-					<Text><![CDATA[Test]]></Text>
-					<Font>
-						<Name>SansSerif</Name>
-						<Size>24</Size>
-						<Style>0</Style>
-					</Font>
-					<Alignment>LEFT</Alignment>
-				</Text>
-			</Shapes>
-			<Controls>
-				<Control Type="Button">
-				 	<EmbeddedIcon>false</EmbeddedIcon>				
-					<Id>1434974088505</Id>
-					<Name><![CDATA[button]]></Name>
-					<X>40</X><Y>80</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="100" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
-						<TextColor/>
-						<Enabled>true</Enabled>
-						<ActionCode><![CDATA[if ( getState() == IDLE )
-	run();
-getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
-					</BasicProperties>
-					<ExtendedProperties>
-						<Font Name="Dialog" Size="11" Style="0"/>
-						<LabelText><![CDATA[Запустить]]></LabelText>
-						<LabelCode><![CDATA[getState() == IDLE ?
-	"Запустить" :
-	"Агент верхнего уровня"]]></LabelCode>
-					</ExtendedProperties>
-				</Control>
-			</Controls>
-
-			<Parameters>			
-				<Parameter>
-					<ParameterName><![CDATA[saw_time]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[saw_readjustment_time]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[mill_readjustment_time]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[batch_size]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[10]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[speed_A]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[100000]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[speed_B]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[100000]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[speed_C]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[8./9]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[raw_cost_A]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[raw_cost_B]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[raw_cost_C]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[warehouse_C]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[warehouse_A]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[warehouse_B]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ParameterValue>
-				</Parameter>
-			</Parameters>			
-			<PresentationProperties 
-				EnableAdaptiveFrameManagement="true" 
-				EnableAntiAliasing="true"
-				EnableEnhancedModelElementsAnimation="true"
-				EnablePanning="true"
-				ToolbarCustomizableAtRuntime="true"
-				EnableZoom="true">
-				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
-				<CpuRatio><![CDATA[ratio_1_2]]></CpuRatio>	        
-				<Title><![CDATA[Test : Simulation_С]]></Title>	
-				<FramesPerSecond><![CDATA[20.0]]></FramesPerSecond>
-				<RealTimeScale>1.0</RealTimeScale>
-				<UIProperty Name="Experiment Progress" Value="false"/>
-				<UIProperty Name="Simulation Progress" Value="true"/>
-				<UIProperty Name="Statusbar Events Per Second" Value="false"/>
-				<UIProperty Name="Statusbar Frames Per Second" Value="false"/>
-				<UIProperty Name="Statusbar Memory" Value="true"/>
-				<UIProperty Name="Statusbar Model Date" Value="true"/>
-				<UIProperty Name="Statusbar Model Step" Value="false"/>
-				<UIProperty Name="Statusbar Model Time" Value="true"/>
-				<UIProperty Name="Statusbar Real Time Of Simulation" Value="false"/>
-				<UIProperty Name="Statusbar Status" Value="true"/>
-				<UIProperty Name="Toolbar Animation setup" Value="false"/>
-				<UIProperty Name="Toolbar Execution control" Value="true"/>
-				<UIProperty Name="Toolbar File" Value="false"/>
-				<UIProperty Name="Toolbar Model navigation" Value="true"/>
-				<UIProperty Name="Toolbar Time scale setup" Value="true"/>
-				<UIProperty Name="Toolbar View" Value="false"/>
-			</PresentationProperties>
-			<ModelTimeProperties 
-				UseCalendar="true">
-				<StopOption><![CDATA[Stop at specified date]]></StopOption>
-				<InitialDate><![CDATA[1420102800000]]></InitialDate>	
-				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1422748800000]]></FinalDate>	
-				<FinalTime><![CDATA[44100.0]]></FinalTime>	
-			</ModelTimeProperties>
-		</SimulationExperiment>
-		<!--   =========   Simulation Experiment   ========  -->
-		<SimulationExperiment ActiveObjectClassId="1421339683717">
-			<Id>1434974109933</Id>
-			<Name><![CDATA[Simulation_ABC]]></Name>
-			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
-			<IconTopGroupPersistent>true</IconTopGroupPersistent>
-			<Frame>
-				<X>0</X>
-				<Y>0</Y>
-				<Width>1000</Width>
-				<Height>600</Height>
-				<Maximized>false</Maximized>
-				<CloseConfirmation>false</CloseConfirmation>
-			</Frame>
-			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
-			<MaximumMemory>256</MaximumMemory>
-			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
-			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
-			<SeedValue>1</SeedValue>
-			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
-			<VmArgs><![CDATA[]]></VmArgs>
-			<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
-			<SnapshotFile></SnapshotFile>
-
-			<Shapes>
-				<Text>
-					<Id>1434974109934</Id>
-					<Name><![CDATA[text]]></Name>
-					<X>40</X><Y>30</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AsObject>true</AsObject>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<Color>-12490271</Color>
-					<Text><![CDATA[Test]]></Text>
-					<Font>
-						<Name>SansSerif</Name>
-						<Size>24</Size>
-						<Style>0</Style>
-					</Font>
-					<Alignment>LEFT</Alignment>
-				</Text>
-			</Shapes>
-			<Controls>
-				<Control Type="Button">
-				 	<EmbeddedIcon>false</EmbeddedIcon>				
-					<Id>1434974109935</Id>
-					<Name><![CDATA[button]]></Name>
-					<X>40</X><Y>80</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="100" Height="30" 
-				AsObject="true">
-                        <EmbeddedIcon>false</EmbeddedIcon>				
-						<FillColor/>
-						<TextColor/>
-						<Enabled>true</Enabled>
-						<ActionCode><![CDATA[if ( getState() == IDLE )
-	run();
-getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
-					</BasicProperties>
-					<ExtendedProperties>
-						<Font Name="Dialog" Size="11" Style="0"/>
-						<LabelText><![CDATA[Запустить]]></LabelText>
-						<LabelCode><![CDATA[getState() == IDLE ?
-	"Запустить" :
-	"Агент верхнего уровня"]]></LabelCode>
-					</ExtendedProperties>
-				</Control>
-			</Controls>
-
-			<Parameters>			
-				<Parameter>
-					<ParameterName><![CDATA[saw_time]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[saw_readjustment_time]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[mill_readjustment_time]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[batch_size]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[10]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[speed_A]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[8]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[speed_B]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[4]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[speed_C]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[2]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[raw_cost_A]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[raw_cost_B]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[raw_cost_C]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[warehouse_C]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[1]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[warehouse_A]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[warehouse_B]]></ParameterName>
-				</Parameter>
-			</Parameters>			
-			<PresentationProperties 
-				EnableAdaptiveFrameManagement="true" 
-				EnableAntiAliasing="true"
-				EnableEnhancedModelElementsAnimation="true"
-				EnablePanning="true"
-				ToolbarCustomizableAtRuntime="true"
-				EnableZoom="true">
-				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
-				<CpuRatio><![CDATA[ratio_1_2]]></CpuRatio>	        
-				<Title><![CDATA[Test : Simulation_ABC]]></Title>	
-				<FramesPerSecond><![CDATA[20.0]]></FramesPerSecond>
-				<RealTimeScale>1.0</RealTimeScale>
-				<UIProperty Name="Experiment Progress" Value="false"/>
-				<UIProperty Name="Simulation Progress" Value="true"/>
-				<UIProperty Name="Statusbar Events Per Second" Value="false"/>
-				<UIProperty Name="Statusbar Frames Per Second" Value="false"/>
-				<UIProperty Name="Statusbar Memory" Value="true"/>
-				<UIProperty Name="Statusbar Model Date" Value="true"/>
-				<UIProperty Name="Statusbar Model Step" Value="false"/>
-				<UIProperty Name="Statusbar Model Time" Value="true"/>
-				<UIProperty Name="Statusbar Real Time Of Simulation" Value="false"/>
-				<UIProperty Name="Statusbar Status" Value="true"/>
-				<UIProperty Name="Toolbar Animation setup" Value="false"/>
-				<UIProperty Name="Toolbar Execution control" Value="true"/>
-				<UIProperty Name="Toolbar File" Value="false"/>
-				<UIProperty Name="Toolbar Model navigation" Value="true"/>
-				<UIProperty Name="Toolbar Time scale setup" Value="true"/>
-				<UIProperty Name="Toolbar View" Value="false"/>
-			</PresentationProperties>
-			<ModelTimeProperties 
-				UseCalendar="true">
-				<StopOption><![CDATA[Stop at specified date]]></StopOption>
-				<InitialDate><![CDATA[1420102800000]]></InitialDate>	
-				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1422748800000]]></FinalDate>	
-				<FinalTime><![CDATA[44100.0]]></FinalTime>	
+				<FinalDate><![CDATA[1433116800000]]></FinalDate>	
+				<FinalTime><![CDATA[217440.0]]></FinalTime>	
 			</ModelTimeProperties>
 		</SimulationExperiment>
 		<!--   =========  Parameter Variation Experiment   ========  -->
