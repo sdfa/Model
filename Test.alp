@@ -2374,6 +2374,39 @@ source_start_C.inject(warehouse_C);]]></Action>
 					</Properties>
 				</Event>
 			</Events>
+			<AnalysisData>
+    			<HistogramData>
+					<Id>1435515614393</Id>
+					<Name><![CDATA[data_inventory]]></Name>
+					<X>770</X><Y>1070</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1435564800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<Value><![CDATA[inventory]]></Value>
+					<NumberOfIntervals>10</NumberOfIntervals>
+					<MinMaxAutodetect>true</MinMaxAutodetect>
+					<RangeMinExpression><![CDATA[0]]></RangeMinExpression>
+					<RangeMaxExpression><![CDATA[1]]></RangeMaxExpression>
+					<InitialIntervalSize><![CDATA[0.1]]></InitialIntervalSize>
+					<CalculateCDF>true</CalculateCDF>
+					<CalculatePercentiles>false</CalculatePercentiles>
+					<LowPercent>10</LowPercent>
+					<HighPercent>10</HighPercent>
+					<Title><![CDATA[]]></Title>
+				</HistogramData>
+			</AnalysisData>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1421339683713</Id>
@@ -2898,7 +2931,8 @@ source_start_C.inject(warehouse_C);]]></Action>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[hold_order_C.unblock();]]></Code>
+								<Code><![CDATA[hold_order_C.unblock();
+inventory=inventory-batch_size*raw_cost_C;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -3885,9 +3919,6 @@ source_start_C.inject(warehouse_C);]]></Action>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[inventory=inventory-batch_size*raw_cost_A]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRemove]]></Name>
@@ -4135,9 +4166,6 @@ source_start_C.inject(warehouse_C);]]></Action>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[inventory=inventory-batch_size*raw_cost_B]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRemove]]></Name>
@@ -4261,9 +4289,6 @@ source_start_C.inject(warehouse_C);]]></Action>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[inventory=inventory-batch_size*raw_cost_C;]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRemove]]></Name>
@@ -4348,7 +4373,7 @@ source_start_C.inject(warehouse_C);]]></Action>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[inventory=inventory+agent.raw_cost]]></Code>
+								<Code><![CDATA[inventory=inventory+agent.raw_cost;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -5304,6 +5329,9 @@ mean_order_C = timeMeasureEnd_order_C.distribution.mean()]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[inventory=inventory+batch_size*raw_cost_C;]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onDiscard]]></Name>
@@ -5444,6 +5472,9 @@ mean_order_C = timeMeasureEnd_order_C.distribution.mean()]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[inventory=inventory+batch_size*raw_cost_B;]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onDiscard]]></Name>
@@ -5584,6 +5615,9 @@ mean_order_C = timeMeasureEnd_order_C.distribution.mean()]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[inventory=inventory+batch_size*raw_cost_A;]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onDiscard]]></Name>
@@ -6184,7 +6218,8 @@ mean_order_C = timeMeasureEnd_order_C.distribution.mean()]]></Code>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[hold_order_B.unblock();]]></Code>
+								<Code><![CDATA[hold_order_B.unblock();
+inventory=inventory-batch_size*raw_cost_B;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -6228,7 +6263,8 @@ mean_order_C = timeMeasureEnd_order_C.distribution.mean()]]></Code>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[hold_order_A.unblock();]]></Code>
+								<Code><![CDATA[hold_order_A.unblock();
+inventory=inventory-batch_size*raw_cost_A;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -7537,7 +7573,7 @@ mean_order_A = timeMeasureEnd_order_A.distribution.mean()]]></Code>
 					<Persistent>true</Persistent>
 					<ShowLegend>true</ShowLegend>
 					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
-					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+					<TimeWindowUnits>MONTH</TimeWindowUnits>
 					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
 					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
 					<VerScaleType>AUTO</VerScaleType>
@@ -7553,7 +7589,7 @@ mean_order_A = timeMeasureEnd_order_A.distribution.mean()]]></Code>
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
 					<SamplesToKeep>200000</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[10000]]></TimeWindowExpression>
+					<TimeWindowExpression><![CDATA[1]]></TimeWindowExpression>
 					<CustomLabelFormat><![CDATA[dd.MM.yyyy HH:mm:ss]]></CustomLabelFormat>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
@@ -7923,6 +7959,69 @@ mean_order_A = timeMeasureEnd_order_A.distribution.mean()]]></Code>
 						<RelativeWidth>0.8</RelativeWidth>
 					</Bars>
     			</BarChart>
+    			<Histogram>
+					<Id>1435515842991</Id>
+					<Name><![CDATA[chart7]]></Name>
+					<X>730</X><Y>840</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1435564800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>270</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>190</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<Persistent>true</Persistent>
+					<ShowLegend>true</ShowLegend>
+					<ShowPDF>true</ShowPDF>
+					<ShowCDF>false</ShowCDF>
+					<ShowMean>true</ShowMean>
+					<Bars>
+						<Direction>UP</Direction>
+						<RelativeWidth>0.8</RelativeWidth>
+					</Bars>
+					<HistogramDataExpression>
+					<Expression><![CDATA[data_inventory]]></Expression>
+						<ColorPDF>-9807155</ColorPDF>
+						<ColorCDF>-9728477</ColorCDF>
+						<ColorLowPercent>-16728065</ColorLowPercent>
+						<ColorHighPercent>-9404272</ColorHighPercent>
+						<ColorMean>-13447886</ColorMean>
+						<LineWidth>1</LineWidth>						
+						<Title><![CDATA[Распределение связанного капитала]]></Title>							
+					</HistogramDataExpression>
+    			</Histogram>
 			</Charts>
 			<Areas>
 				<Area>
@@ -8881,25 +8980,12 @@ getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[speed_A]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[0
-//0.125]]></Code>
-					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[speed_B]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[0
-//0.25]]></Code>
-					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[speed_C]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[//0
-//0.5
-9./8]]></Code>
-					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[raw_cost_A]]></ParameterName>
