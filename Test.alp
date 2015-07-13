@@ -344,7 +344,8 @@
 						<DefaultValue Class="CodeValue">
 							<Code><![CDATA[//0
 //0.5
-9./8]]></Code>
+//9./8
+1]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1434214108597</Id>
@@ -8980,12 +8981,29 @@ getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[speed_A]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[//0
+//0.125
+25./80]]></Code>
+					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[speed_B]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[//0
+//0.25
+25./80]]></Code>
+					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[speed_C]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[//0
+//0.5
+//9./8
+//1
+25./80]]></Code>
+					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[raw_cost_A]]></ParameterName>
@@ -9060,10 +9078,12 @@ getPresentation().setPresentable( getEngine().getRoot() );]]></ActionCode>
 				<CloseConfirmation>false</CloseConfirmation>
 			</Frame>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
-			<MaximumMemory>256</MaximumMemory>
+			<MaximumMemory>1024</MaximumMemory>
 			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
-			<AfterSimulationRunCode><![CDATA[dataset_time.add(root.warehouse_C,root.mean_order_C);
+			<AfterSimulationRunCode><![CDATA[dataset_time_A.add(root.warehouse_A,root.mean_order_A);
+dataset_time_B.add(root.warehouse_B,root.mean_order_B);
+dataset_time_C.add(root.warehouse_C,root.mean_order_C);
 dataset_inventory.add(root.warehouse_C,root.data_inventory.mean());]]></AfterSimulationRunCode>
 			<SeedValue>1</SeedValue>
 			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
@@ -9072,23 +9092,23 @@ dataset_inventory.add(root.warehouse_C,root.data_inventory.mean());]]></AfterSim
 			<SnapshotFile></SnapshotFile>
 			<Connectivity>
 				<ExcelFile>
-					<Id>1435528383011</Id>
+					<Id>1435835836279</Id>
 					<Name><![CDATA[excelFile]]></Name>
-					<X>350</X><Y>540</Y>
+					<X>350</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<FileName><![CDATA[data.xlsx]]></FileName>
+					<FileName><![CDATA[Output.xlsx]]></FileName>
 					<SaveInSnapshot>false</SaveInSnapshot>
-					<LoadOnStartup>true</LoadOnStartup>
+					<LoadOnStartup>false</LoadOnStartup>
 					<SaveOnDispose>true</SaveOnDispose>
 				</ExcelFile>
 			</Connectivity>
 			<AnalysisData>
     			<DataSet>
 					<Id>1435068665688</Id>
-					<Name><![CDATA[dataset_time]]></Name>
+					<Name><![CDATA[dataset_time_C]]></Name>
 					<X>350</X><Y>500</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -9106,7 +9126,7 @@ dataset_inventory.add(root.warehouse_C,root.data_inventory.mean());]]></AfterSim
 						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<SamplesToKeep>100</SamplesToKeep>
+					<SamplesToKeep>1000</SamplesToKeep>
 				</DataSet>
     			<DataSet>
 					<Id>1435527077250</Id>
@@ -9128,7 +9148,51 @@ dataset_inventory.add(root.warehouse_C,root.data_inventory.mean());]]></AfterSim
 						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<SamplesToKeep>100</SamplesToKeep>
+					<SamplesToKeep>1000</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1436805211261</Id>
+					<Name><![CDATA[dataset_time_A]]></Name>
+					<X>90</X><Y>500</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1435132800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>false</FreezeXAxis>
+					<SamplesToKeep>1000</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1436805212053</Id>
+					<Name><![CDATA[dataset_time_B]]></Name>
+					<X>220</X><Y>500</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1435132800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>false</FreezeXAxis>
+					<SamplesToKeep>1000</SamplesToKeep>
 				</DataSet>
 			</AnalysisData>
 
@@ -9894,7 +9958,7 @@ dataset_inventory.add(root.warehouse_C,root.data_inventory.mean());]]></AfterSim
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Width>460</Width>
-					<Height>320</Height>
+					<Height>350</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
@@ -9909,7 +9973,7 @@ dataset_inventory.add(root.warehouse_C,root.data_inventory.mean());]]></AfterSim
 					<Legend>
 						<Place>SOUTH</Place>
 						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
+						<Size>60</Size>
 					</Legend>
 					<Labels>
 						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
@@ -9924,8 +9988,28 @@ dataset_inventory.add(root.warehouse_C,root.data_inventory.mean());]]></AfterSim
 					<DrawLine>true</DrawLine>
 					<Interpolation>LINEAR</Interpolation>
 					<DatasetExpression>  
-						<Title><![CDATA[Среднее время выполения заказа]]></Title>
-					<Expression><![CDATA[dataset_time]]></Expression>
+						<Title><![CDATA[Среднее время выполения заказа A]]></Title>
+					<Expression><![CDATA[dataset_time_A]]></Expression>
+					<Color>-9404272</Color>
+					<Expression2><![CDATA[0]]></Expression2>
+					<Expression2Flag>false</Expression2Flag>
+						<PointStyle>SQUARE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+						<HorizontalAxisExpression><![CDATA[0]]></HorizontalAxisExpression>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Среднее время выполения заказа B]]></Title>
+					<Expression><![CDATA[dataset_time_B]]></Expression>
+					<Color>-7667573</Color>
+					<Expression2><![CDATA[0]]></Expression2>
+					<Expression2Flag>false</Expression2Flag>
+						<PointStyle>SQUARE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+						<HorizontalAxisExpression><![CDATA[0]]></HorizontalAxisExpression>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Среднее время выполения заказа C]]></Title>
+					<Expression><![CDATA[dataset_time_C]]></Expression>
 					<Color>-13447886</Color>
 					<Expression2><![CDATA[Main.mean_order_C]]></Expression2>
 					<Expression2Flag>false</Expression2Flag>
@@ -9933,7 +10017,7 @@ dataset_inventory.add(root.warehouse_C,root.data_inventory.mean());]]></AfterSim
 						<LineWidth>1.0</LineWidth>
 						<HorizontalAxisExpression><![CDATA[warehouse_C]]></HorizontalAxisExpression>
 					</DatasetExpression>
-					<SamplesToKeep>100</SamplesToKeep>
+					<SamplesToKeep>1000</SamplesToKeep>
 					<HorScaleFromExpression><![CDATA[0]]></HorScaleFromExpression>
 					<HorScaleToExpression><![CDATA[1]]></HorScaleToExpression>
 					<HorScaleType>AUTO</HorScaleType>
@@ -10005,6 +10089,11 @@ dataset_inventory.add(root.warehouse_C,root.data_inventory.mean());]]></AfterSim
     			</Plot>
 			</Charts>
 
+			<AfterExperimentCode><![CDATA[excelFile.readFile();
+excelFile.writeDataSet(dataset_time_A, 1, 1, 1);
+excelFile.writeDataSet(dataset_time_B, 1, 1, 4);
+excelFile.writeDataSet(dataset_time_C, 1, 1, 7);
+excelFile.writeDataSet(dataset_inventory, 1, 1, 10);]]></AfterExperimentCode>
 			<AllowParallelEvaluations>false</AllowParallelEvaluations>
 			<UseFreeformParameters>false</UseFreeformParameters>
 			<NumberOfRuns>10</NumberOfRuns>
@@ -10070,21 +10159,21 @@ dataset_inventory.add(root.warehouse_C,root.data_inventory.mean());]]></AfterSim
 				<Id>1434214083757</Id>
 				<Type>FIXED</Type>
 				<Expression Class="CodeValue">
-					<Code><![CDATA[0]]></Code>
+					<Code><![CDATA[25./80]]></Code>
 				</Expression>
 			</RangeVariationParamValue>
 			<RangeVariationParamValue>	
 				<Id>1434214104334</Id>
 				<Type>FIXED</Type>
 				<Expression Class="CodeValue">
-					<Code><![CDATA[0]]></Code>
+					<Code><![CDATA[25./80]]></Code>
 				</Expression>
 			</RangeVariationParamValue>
 			<RangeVariationParamValue>	
 				<Id>1434214108599</Id>
 				<Type>FIXED</Type>
 				<Expression Class="CodeValue">
-					<Code><![CDATA[9./8]]></Code>
+					<Code><![CDATA[25./80]]></Code>
 				</Expression>
 			</RangeVariationParamValue>
 			<RangeVariationParamValue>	
@@ -10134,8 +10223,8 @@ dataset_inventory.add(root.warehouse_C,root.data_inventory.mean());]]></AfterSim
 				<StopOption><![CDATA[Stop at specified date]]></StopOption>
 				<InitialDate><![CDATA[1420070400000]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1433116800000]]></FinalDate>	
-				<FinalTime><![CDATA[217440.0]]></FinalTime>	
+				<FinalDate><![CDATA[1422748800000]]></FinalDate>	
+				<FinalTime><![CDATA[44640.0]]></FinalTime>	
 			</ModelTimeProperties>
 			<PresentationProperties 
 				EnableAdaptiveFrameManagement="true" 
@@ -10163,8 +10252,8 @@ dataset_inventory.add(root.warehouse_C,root.data_inventory.mean());]]></AfterSim
 				<UseReplication>false</UseReplication>
 				<FixedReplicationsNumber>true</FixedReplicationsNumber>
 				<ReplicationPerIteration>10</ReplicationPerIteration>
-				<MinimumReplication>2</MinimumReplication>
-				<MaximumReplication>10</MaximumReplication>
+				<MinimumReplication>5</MinimumReplication>
+				<MaximumReplication>100</MaximumReplication>
 				<ConfidenceLevel>LEVEL_80</ConfidenceLevel>
 				<ErrorPercent>0.5</ErrorPercent>
 				<ExpressionForConfidenceComputation><![CDATA[0]]></ExpressionForConfidenceComputation>
